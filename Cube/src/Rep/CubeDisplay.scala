@@ -6,14 +6,6 @@ import scala.swing.Panel
 import scala.swing.event.MouseClicked
 
 class CubeDisplay(data: Array[Array[Char]]) extends Panel {
-  
-//  listenTo(mouse.clicks)
-//    reactions += {
-//      case e: MouseClicked =>
-//        println("Mouse clicked at " + e.point)
-//        repaint
-//    }
-//  
   override def paintComponent(g: Graphics2D) {
     val dx = g.getClipBounds.width.toFloat  / data.length
     val dy = g.getClipBounds.height.toFloat / data.map(_.length).max
